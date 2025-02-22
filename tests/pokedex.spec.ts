@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { Pokedex, PokemonType } from "../src/ejercicio-1/pokedex";
+import { Pokedex, PokemonType, Pokemon } from "../src/ejercicio-1/pokedex";
 
 let pokedex = new Pokedex([
     { 

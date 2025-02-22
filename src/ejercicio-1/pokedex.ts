@@ -1,4 +1,4 @@
-interface PokemonStats {
+export interface PokemonStats {
     attack: number;
     defense: number;
     speed: number;
@@ -12,9 +12,12 @@ export enum PokemonType {
     electrico = "electrico"
 }
 
-type OtherStats = [number, number];
+export type OtherStats = [number, number];
 
-interface Pokemon {
+/**
+ * Representa la información básica de un Pokémon.
+ */
+export interface Pokemon {
     name: string;
     weight_height: OtherStats;
     type: PokemonType;

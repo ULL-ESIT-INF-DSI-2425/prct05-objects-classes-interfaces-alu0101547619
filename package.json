@@ -1,10 +1,10 @@
 {
-  "name": "theory-examples",
+  "name": "prct05-objects-classes-interfaces-alu0101547619",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "start": "tsc-watch --onSuccess \"node dist/index.js\"",
-    "doc": "typedoc",
+    "doc": "typedoc ./src/**/*.ts",
     "test": "vitest run",
     "coverage": "vitest run --coverage --coverage.include src/*"
   },
