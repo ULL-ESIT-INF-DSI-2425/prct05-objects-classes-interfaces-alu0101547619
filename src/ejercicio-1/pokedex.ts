@@ -1,3 +1,5 @@
+import { Combat } from "./combat";
+
 export interface PokemonStats {
     attack: number;
     defense: number;
@@ -65,13 +67,8 @@ export class Pokedex {
           return pokemon.weight_height[1] === Number(dato);
 
         case "type":
-          return pokemon.type === dato;
-          //   let tipo = PokemonType[dato as keyof typeof PokemonType];
-          // this._pokemons.forEach(pokemon => {
-          //   if (pokemon.type === tipo) {
-          //     resultado.push(pokemon);
-          //   }
-          // });
+          const typeIndex = PokemonType[dato as keyof typeof PokemonType];
+          return pokemon.type === typeIndex;
         case "attack":
           return pokemon.stats.attack === Number(dato);
 
@@ -84,9 +81,8 @@ export class Pokedex {
         case "speed":
           return pokemon.stats.speed === Number(dato);
 
-        default:
-          return undefined; // Filtro inválido, no se devuelve nada
       }
     });
   }
 }
+
