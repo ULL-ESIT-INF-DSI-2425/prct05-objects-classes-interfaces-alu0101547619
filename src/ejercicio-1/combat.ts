@@ -40,16 +40,19 @@ export class Combat{
       if (efectividad > 1) console.log(`El golpe es supereficaz!!!`);
       if (efectividad === 1) console.log(`El golpe es eficaz`);
       if (efectividad < 1) console.log(`El golpe es poco eficaz...`);
+      turnos++;
+      my_var? my_var = false : my_var = true;
       if (maxHP1 <= 0) {
         console.log(`\n${this._first_pokemon.name} se ha debilitado\nEl ganador es ${this._second_pokemon.name}!\n`);
         return this._second_pokemon.name; 
-      }
+      } else 
       if (maxHP2 <= 0) {
         console.log(`\n${this._second_pokemon.name} se ha debilitado\nEl ganador es ${this._first_pokemon.name}!\n`);
         return this._first_pokemon.name;
+      } else {
+        continue;
       }
-      turnos++;
-      my_var? my_var = false : my_var = true;
+     
     }
   }
 
